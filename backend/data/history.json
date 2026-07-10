@@ -1,0 +1,1262 @@
+[
+  {
+    "id": "1783709694641",
+    "company": "DELL",
+    "timestamp": "2026-07-10T18:54:54.641Z",
+    "result": {
+      "company": "DELL",
+      "overview": "Dell Technologies Inc. designs, develops, manufactures, markets, sells, and supports various comprehensive and integrated solutions, products, and services in the Americas, Europe, the Middle East, Asia, and internationally. The company operates through Infrastructure Solutions Group (ISG) and Client Solutions Group (CSG) segments. The ISG segment provides modern and traditional storage solutions, including all-flash, purpose-built, hyper-converged infrastructure, software-defined storage, and general-purpose and AI-optimized servers. This segment also offers networking products and services comprising wide area network infrastructure, data center and edge networking switches, and cables and optics that help its business customers to transform and modernize their infrastructure and complementing its server and storage solutions; and software, peripherals, and services, including consulting and support, and deployment. The CSG segment provides notebooks, desktops, and workstations and branded peripherals that include displays, docking stations, keyboards, mice, webcam and audio devices, and third-party software and peripherals; and configuration, and extended warranties services. The company is involved in originating, collecting, and servicing customer financing arrangements and offers payment and consumption solutions and services, such utility, subscription, as-a-service, leases, and loans, as well as fixed-term leases and loans. It serves enterprises, governmental agencies and other public institutions, educational institutions, healthcare organizations, small and medium-sized businesses, and consumers. The company was formerly known as Denali Holding Inc. and changed its name to Dell Technologies Inc. in March 2013. Dell Technologies Inc. was founded in 1984 and is headquartered in Round Rock, Texas.",
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "marketCap": "$285.12B",
+      "revenue": "$134.00B",
+      "peRatio": "35.13",
+      "eps": "12.56",
+      "profitMargin": "6.28%",
+      "dividendYield": "0.56%",
+      "fiftyTwoWeekHigh": "469.47",
+      "fiftyTwoWeekLow": "110.22",
+      "news": [],
+      "newsSentiment": "Neutral",
+      "chartData": [
+        {
+          "date": "2026-01-12",
+          "price": 120.47000122070312
+        },
+        {
+          "date": "2026-01-13",
+          "price": 119.66000366210938
+        },
+        {
+          "date": "2026-01-14",
+          "price": 118.69000244140625
+        },
+        {
+          "date": "2026-01-15",
+          "price": 119.66000366210938
+        },
+        {
+          "date": "2026-01-16",
+          "price": 120.52999877929688
+        },
+        {
+          "date": "2026-01-20",
+          "price": 111.06999969482422
+        },
+        {
+          "date": "2026-01-21",
+          "price": 113.26000213623047
+        },
+        {
+          "date": "2026-01-22",
+          "price": 117.16999816894531
+        },
+        {
+          "date": "2026-01-23",
+          "price": 115.43000030517578
+        },
+        {
+          "date": "2026-01-26",
+          "price": 115.93000030517578
+        },
+        {
+          "date": "2026-01-27",
+          "price": 114.66000366210938
+        },
+        {
+          "date": "2026-01-28",
+          "price": 117.31999969482422
+        },
+        {
+          "date": "2026-01-29",
+          "price": 118.48999786376953
+        },
+        {
+          "date": "2026-01-30",
+          "price": 114.44000244140625
+        },
+        {
+          "date": "2026-02-02",
+          "price": 119.16000366210938
+        },
+        {
+          "date": "2026-02-03",
+          "price": 117.1500015258789
+        },
+        {
+          "date": "2026-02-04",
+          "price": 122.04000091552734
+        },
+        {
+          "date": "2026-02-05",
+          "price": 115.38999938964844
+        },
+        {
+          "date": "2026-02-06",
+          "price": 121.05000305175781
+        },
+        {
+          "date": "2026-02-09",
+          "price": 120.91000366210938
+        },
+        {
+          "date": "2026-02-10",
+          "price": 126.01000213623047
+        },
+        {
+          "date": "2026-02-11",
+          "price": 124.16000366210938
+        },
+        {
+          "date": "2026-02-12",
+          "price": 112.81999969482422
+        },
+        {
+          "date": "2026-02-13",
+          "price": 117.48999786376953
+        },
+        {
+          "date": "2026-02-17",
+          "price": 116.08999633789062
+        },
+        {
+          "date": "2026-02-18",
+          "price": 116.77999877929688
+        },
+        {
+          "date": "2026-02-19",
+          "price": 119.05999755859375
+        },
+        {
+          "date": "2026-02-20",
+          "price": 122.2699966430664
+        },
+        {
+          "date": "2026-02-23",
+          "price": 119.13999938964844
+        },
+        {
+          "date": "2026-02-24",
+          "price": 119.77999877929688
+        },
+        {
+          "date": "2026-02-25",
+          "price": 123.4800033569336
+        },
+        {
+          "date": "2026-02-26",
+          "price": 121.44999694824219
+        },
+        {
+          "date": "2026-02-27",
+          "price": 148.0800018310547
+        },
+        {
+          "date": "2026-03-02",
+          "price": 153.5500030517578
+        },
+        {
+          "date": "2026-03-03",
+          "price": 145.17999267578125
+        },
+        {
+          "date": "2026-03-04",
+          "price": 147.10000610351562
+        },
+        {
+          "date": "2026-03-05",
+          "price": 146.52000427246094
+        },
+        {
+          "date": "2026-03-06",
+          "price": 146.47999572753906
+        },
+        {
+          "date": "2026-03-09",
+          "price": 146.50999450683594
+        },
+        {
+          "date": "2026-03-10",
+          "price": 143.8000030517578
+        },
+        {
+          "date": "2026-03-11",
+          "price": 147.3699951171875
+        },
+        {
+          "date": "2026-03-12",
+          "price": 149.91000366210938
+        },
+        {
+          "date": "2026-03-13",
+          "price": 151.6199951171875
+        },
+        {
+          "date": "2026-03-16",
+          "price": 156.5399932861328
+        },
+        {
+          "date": "2026-03-17",
+          "price": 153.00999450683594
+        },
+        {
+          "date": "2026-03-18",
+          "price": 149.2100067138672
+        },
+        {
+          "date": "2026-03-19",
+          "price": 156.75999450683594
+        },
+        {
+          "date": "2026-03-20",
+          "price": 157.6699981689453
+        },
+        {
+          "date": "2026-03-23",
+          "price": 164.58999633789062
+        },
+        {
+          "date": "2026-03-24",
+          "price": 176.91000366210938
+        },
+        {
+          "date": "2026-03-25",
+          "price": 184.00999450683594
+        },
+        {
+          "date": "2026-03-26",
+          "price": 175.82000732421875
+        },
+        {
+          "date": "2026-03-27",
+          "price": 171.80999755859375
+        },
+        {
+          "date": "2026-03-30",
+          "price": 164.66000366210938
+        },
+        {
+          "date": "2026-03-31",
+          "price": 164.1300048828125
+        },
+        {
+          "date": "2026-04-01",
+          "price": 169.3800048828125
+        },
+        {
+          "date": "2026-04-02",
+          "price": 174.3699951171875
+        },
+        {
+          "date": "2026-04-06",
+          "price": 173.17999267578125
+        },
+        {
+          "date": "2026-04-07",
+          "price": 177.69000244140625
+        },
+        {
+          "date": "2026-04-08",
+          "price": 185.47000122070312
+        },
+        {
+          "date": "2026-04-09",
+          "price": 181.4600067138672
+        },
+        {
+          "date": "2026-04-10",
+          "price": 177.8000030517578
+        },
+        {
+          "date": "2026-04-13",
+          "price": 189.7899932861328
+        },
+        {
+          "date": "2026-04-14",
+          "price": 184.50999450683594
+        },
+        {
+          "date": "2026-04-15",
+          "price": 177.27999877929688
+        },
+        {
+          "date": "2026-04-16",
+          "price": 193.08999633789062
+        },
+        {
+          "date": "2026-04-17",
+          "price": 196.5500030517578
+        },
+        {
+          "date": "2026-04-20",
+          "price": 204.24000549316406
+        },
+        {
+          "date": "2026-04-21",
+          "price": 212.36000061035156
+        },
+        {
+          "date": "2026-04-22",
+          "price": 214.64999389648438
+        },
+        {
+          "date": "2026-04-23",
+          "price": 212.13999938964844
+        },
+        {
+          "date": "2026-04-24",
+          "price": 216.08999633789062
+        },
+        {
+          "date": "2026-04-27",
+          "price": 215.97000122070312
+        },
+        {
+          "date": "2026-04-28",
+          "price": 205.92999267578125
+        },
+        {
+          "date": "2026-04-29",
+          "price": 205.66000366210938
+        },
+        {
+          "date": "2026-04-30",
+          "price": 208.9499969482422
+        },
+        {
+          "date": "2026-05-01",
+          "price": 210.1699981689453
+        },
+        {
+          "date": "2026-05-04",
+          "price": 211.63999938964844
+        },
+        {
+          "date": "2026-05-05",
+          "price": 216.32000732421875
+        },
+        {
+          "date": "2026-05-06",
+          "price": 238.8000030517578
+        },
+        {
+          "date": "2026-05-07",
+          "price": 230.27000427246094
+        },
+        {
+          "date": "2026-05-08",
+          "price": 260.4599914550781
+        },
+        {
+          "date": "2026-05-11",
+          "price": 247.0399932861328
+        },
+        {
+          "date": "2026-05-12",
+          "price": 238.94000244140625
+        },
+        {
+          "date": "2026-05-13",
+          "price": 243.8699951171875
+        },
+        {
+          "date": "2026-05-14",
+          "price": 247.88999938964844
+        },
+        {
+          "date": "2026-05-15",
+          "price": 241.99000549316406
+        },
+        {
+          "date": "2026-05-18",
+          "price": 238.02999877929688
+        },
+        {
+          "date": "2026-05-19",
+          "price": 235.25999450683594
+        },
+        {
+          "date": "2026-05-20",
+          "price": 242.92999267578125
+        },
+        {
+          "date": "2026-05-21",
+          "price": 252.8000030517578
+        },
+        {
+          "date": "2026-05-22",
+          "price": 295.19000244140625
+        },
+        {
+          "date": "2026-05-26",
+          "price": 305.0799865722656
+        },
+        {
+          "date": "2026-05-27",
+          "price": 305.32000732421875
+        },
+        {
+          "date": "2026-05-28",
+          "price": 317.04998779296875
+        },
+        {
+          "date": "2026-05-29",
+          "price": 420.9100036621094
+        },
+        {
+          "date": "2026-06-01",
+          "price": 465.9599914550781
+        },
+        {
+          "date": "2026-06-02",
+          "price": 435.30999755859375
+        },
+        {
+          "date": "2026-06-03",
+          "price": 421.0799865722656
+        },
+        {
+          "date": "2026-06-04",
+          "price": 422.04998779296875
+        },
+        {
+          "date": "2026-06-05",
+          "price": 394.3900146484375
+        },
+        {
+          "date": "2026-06-08",
+          "price": 400.7699890136719
+        },
+        {
+          "date": "2026-06-09",
+          "price": 381.7799987792969
+        },
+        {
+          "date": "2026-06-10",
+          "price": 369.8299865722656
+        },
+        {
+          "date": "2026-06-11",
+          "price": 391.45001220703125
+        },
+        {
+          "date": "2026-06-12",
+          "price": 395.57000732421875
+        },
+        {
+          "date": "2026-06-15",
+          "price": 409.07000732421875
+        },
+        {
+          "date": "2026-06-16",
+          "price": 404.0799865722656
+        },
+        {
+          "date": "2026-06-17",
+          "price": 419.32000732421875
+        },
+        {
+          "date": "2026-06-18",
+          "price": 409.5
+        },
+        {
+          "date": "2026-06-22",
+          "price": 418.7099914550781
+        },
+        {
+          "date": "2026-06-23",
+          "price": 427.7799987792969
+        },
+        {
+          "date": "2026-06-24",
+          "price": 434.05999755859375
+        },
+        {
+          "date": "2026-06-25",
+          "price": 409.45001220703125
+        },
+        {
+          "date": "2026-06-26",
+          "price": 399.489990234375
+        },
+        {
+          "date": "2026-06-29",
+          "price": 414.6099853515625
+        },
+        {
+          "date": "2026-06-30",
+          "price": 431.4599914550781
+        },
+        {
+          "date": "2026-07-01",
+          "price": 425.25
+        },
+        {
+          "date": "2026-07-02",
+          "price": 394.32000732421875
+        },
+        {
+          "date": "2026-07-06",
+          "price": 411.79998779296875
+        },
+        {
+          "date": "2026-07-07",
+          "price": 417.2799987792969
+        },
+        {
+          "date": "2026-07-08",
+          "price": 431.9700012207031
+        },
+        {
+          "date": "2026-07-09",
+          "price": 450.2200012207031
+        }
+      ],
+      "investmentScore": 72,
+      "confidenceScore": 80,
+      "riskLevel": "Medium",
+      "recommendation": "HOLD",
+      "pros": [
+        "DELL has a large market capitalization of $285.12B, indicating a stable and established company",
+        "The company's revenue of $134.00B suggests a significant presence in the computer hardware industry"
+      ],
+      "cons": [
+        "The PE ratio of 35.13 is relatively high, which may indicate overvaluation",
+        "The dividend yield of 0.56% is relatively low, which may not be attractive to income-seeking investors"
+      ],
+      "summary": "DELL's financial fundamentals suggest a stable and established company with a significant presence in the computer hardware industry. However, the high PE ratio and low dividend yield are concerns that may impact the company's attractiveness to investors. Given the lack of recent news, it is recommended to hold the stock and monitor future developments. Overall, DELL's medium risk level and relatively high investment score suggest that it may be a viable long-term investment opportunity, but investors should exercise caution and consider their individual risk tolerance and investment goals."
+    }
+  },
+  {
+    "id": "1783571655265",
+    "company": "APPLE",
+    "timestamp": "2026-07-09T04:34:15.265Z",
+    "result": {
+      "company": "AAPL",
+      "overview": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal computers; iPad, a line of multi-purpose tablets; and wearables, home, and accessories comprising AirPods, Apple Vision Pro, Apple TV, Apple Watch, Beats products, and HomePod, as well as Apple branded and third-party accessories. It also provides AppleCare support and cloud services; and operates various platforms, including the App Store that allow customers to discover and download applications and digital content, such as books, music, video, games, and podcasts, as well as advertising services include third-party licensing arrangements and its own advertising platforms. In addition, the company offers various subscription-based services, such as Apple Arcade, a game subscription service; Apple Fitness+, a personalized fitness service; Apple Music, which offers users a curated listening experience with on-demand radio stations; Apple News+, a subscription news and magazine service; Apple TV, which offers exclusive original content and live sports; Apple Card, a co-branded credit card; and Apple Pay, a cashless payment service, as well as licenses its intellectual property. The company serves consumers, and small and mid-sized businesses; and the education, enterprise, and government markets. It distributes third-party applications for its products through the App Store. The company also sells its products through its retail and online stores, and direct sales force; and third-party cellular network carriers and resellers. The company was formerly known as Apple Computer, Inc. and changed its name to Apple Inc. in January 2007. Apple Inc. was founded in 1976 and is headquartered in Cupertino, California.",
+      "industry": "Consumer Electronics",
+      "sector": "Technology",
+      "marketCap": "$4.60T",
+      "revenue": "$451.44B",
+      "peRatio": "37.58",
+      "eps": "8.34",
+      "profitMargin": "27.15%",
+      "dividendYield": "0.35%",
+      "fiftyTwoWeekHigh": "317.40",
+      "fiftyTwoWeekLow": "201.50",
+      "news": [],
+      "newsSentiment": "Neutral",
+      "chartData": [
+        {
+          "date": "2026-01-09",
+          "price": 259.3699951171875
+        },
+        {
+          "date": "2026-01-12",
+          "price": 260.25
+        },
+        {
+          "date": "2026-01-13",
+          "price": 261.04998779296875
+        },
+        {
+          "date": "2026-01-14",
+          "price": 259.9599914550781
+        },
+        {
+          "date": "2026-01-15",
+          "price": 258.2099914550781
+        },
+        {
+          "date": "2026-01-16",
+          "price": 255.52999877929688
+        },
+        {
+          "date": "2026-01-20",
+          "price": 246.6999969482422
+        },
+        {
+          "date": "2026-01-21",
+          "price": 247.64999389648438
+        },
+        {
+          "date": "2026-01-22",
+          "price": 248.35000610351562
+        },
+        {
+          "date": "2026-01-23",
+          "price": 248.0399932861328
+        },
+        {
+          "date": "2026-01-26",
+          "price": 255.41000366210938
+        },
+        {
+          "date": "2026-01-27",
+          "price": 258.2699890136719
+        },
+        {
+          "date": "2026-01-28",
+          "price": 256.44000244140625
+        },
+        {
+          "date": "2026-01-29",
+          "price": 258.2799987792969
+        },
+        {
+          "date": "2026-01-30",
+          "price": 259.4800109863281
+        },
+        {
+          "date": "2026-02-02",
+          "price": 270.010009765625
+        },
+        {
+          "date": "2026-02-03",
+          "price": 269.4800109863281
+        },
+        {
+          "date": "2026-02-04",
+          "price": 276.489990234375
+        },
+        {
+          "date": "2026-02-05",
+          "price": 275.9100036621094
+        },
+        {
+          "date": "2026-02-06",
+          "price": 278.1199951171875
+        },
+        {
+          "date": "2026-02-09",
+          "price": 274.6199951171875
+        },
+        {
+          "date": "2026-02-10",
+          "price": 273.67999267578125
+        },
+        {
+          "date": "2026-02-11",
+          "price": 275.5
+        },
+        {
+          "date": "2026-02-12",
+          "price": 261.7300109863281
+        },
+        {
+          "date": "2026-02-13",
+          "price": 255.77999877929688
+        },
+        {
+          "date": "2026-02-17",
+          "price": 263.8800048828125
+        },
+        {
+          "date": "2026-02-18",
+          "price": 264.3500061035156
+        },
+        {
+          "date": "2026-02-19",
+          "price": 260.5799865722656
+        },
+        {
+          "date": "2026-02-20",
+          "price": 264.5799865722656
+        },
+        {
+          "date": "2026-02-23",
+          "price": 266.17999267578125
+        },
+        {
+          "date": "2026-02-24",
+          "price": 272.1400146484375
+        },
+        {
+          "date": "2026-02-25",
+          "price": 274.2300109863281
+        },
+        {
+          "date": "2026-02-26",
+          "price": 272.95001220703125
+        },
+        {
+          "date": "2026-02-27",
+          "price": 264.17999267578125
+        },
+        {
+          "date": "2026-03-02",
+          "price": 264.7200012207031
+        },
+        {
+          "date": "2026-03-03",
+          "price": 263.75
+        },
+        {
+          "date": "2026-03-04",
+          "price": 262.5199890136719
+        },
+        {
+          "date": "2026-03-05",
+          "price": 260.2900085449219
+        },
+        {
+          "date": "2026-03-06",
+          "price": 257.4599914550781
+        },
+        {
+          "date": "2026-03-09",
+          "price": 259.8800048828125
+        },
+        {
+          "date": "2026-03-10",
+          "price": 260.8299865722656
+        },
+        {
+          "date": "2026-03-11",
+          "price": 260.80999755859375
+        },
+        {
+          "date": "2026-03-12",
+          "price": 255.75999450683594
+        },
+        {
+          "date": "2026-03-13",
+          "price": 250.1199951171875
+        },
+        {
+          "date": "2026-03-16",
+          "price": 252.82000732421875
+        },
+        {
+          "date": "2026-03-17",
+          "price": 254.22999572753906
+        },
+        {
+          "date": "2026-03-18",
+          "price": 249.94000244140625
+        },
+        {
+          "date": "2026-03-19",
+          "price": 248.9600067138672
+        },
+        {
+          "date": "2026-03-20",
+          "price": 247.99000549316406
+        },
+        {
+          "date": "2026-03-23",
+          "price": 251.49000549316406
+        },
+        {
+          "date": "2026-03-24",
+          "price": 251.63999938964844
+        },
+        {
+          "date": "2026-03-25",
+          "price": 252.6199951171875
+        },
+        {
+          "date": "2026-03-26",
+          "price": 252.88999938964844
+        },
+        {
+          "date": "2026-03-27",
+          "price": 248.8000030517578
+        },
+        {
+          "date": "2026-03-30",
+          "price": 246.6300048828125
+        },
+        {
+          "date": "2026-03-31",
+          "price": 253.7899932861328
+        },
+        {
+          "date": "2026-04-01",
+          "price": 255.6300048828125
+        },
+        {
+          "date": "2026-04-02",
+          "price": 255.9199981689453
+        },
+        {
+          "date": "2026-04-06",
+          "price": 258.8599853515625
+        },
+        {
+          "date": "2026-04-07",
+          "price": 253.5
+        },
+        {
+          "date": "2026-04-08",
+          "price": 258.8999938964844
+        },
+        {
+          "date": "2026-04-09",
+          "price": 260.489990234375
+        },
+        {
+          "date": "2026-04-10",
+          "price": 260.4800109863281
+        },
+        {
+          "date": "2026-04-13",
+          "price": 259.20001220703125
+        },
+        {
+          "date": "2026-04-14",
+          "price": 258.8299865722656
+        },
+        {
+          "date": "2026-04-15",
+          "price": 266.42999267578125
+        },
+        {
+          "date": "2026-04-16",
+          "price": 263.3999938964844
+        },
+        {
+          "date": "2026-04-17",
+          "price": 270.2300109863281
+        },
+        {
+          "date": "2026-04-20",
+          "price": 273.04998779296875
+        },
+        {
+          "date": "2026-04-21",
+          "price": 266.1700134277344
+        },
+        {
+          "date": "2026-04-22",
+          "price": 273.1700134277344
+        },
+        {
+          "date": "2026-04-23",
+          "price": 273.42999267578125
+        },
+        {
+          "date": "2026-04-24",
+          "price": 271.05999755859375
+        },
+        {
+          "date": "2026-04-27",
+          "price": 267.6099853515625
+        },
+        {
+          "date": "2026-04-28",
+          "price": 270.7099914550781
+        },
+        {
+          "date": "2026-04-29",
+          "price": 270.1700134277344
+        },
+        {
+          "date": "2026-04-30",
+          "price": 271.3500061035156
+        },
+        {
+          "date": "2026-05-01",
+          "price": 280.1400146484375
+        },
+        {
+          "date": "2026-05-04",
+          "price": 276.8299865722656
+        },
+        {
+          "date": "2026-05-05",
+          "price": 284.17999267578125
+        },
+        {
+          "date": "2026-05-06",
+          "price": 287.510009765625
+        },
+        {
+          "date": "2026-05-07",
+          "price": 287.44000244140625
+        },
+        {
+          "date": "2026-05-08",
+          "price": 293.32000732421875
+        },
+        {
+          "date": "2026-05-11",
+          "price": 292.67999267578125
+        },
+        {
+          "date": "2026-05-12",
+          "price": 294.79998779296875
+        },
+        {
+          "date": "2026-05-13",
+          "price": 298.8699951171875
+        },
+        {
+          "date": "2026-05-14",
+          "price": 298.2099914550781
+        },
+        {
+          "date": "2026-05-15",
+          "price": 300.2300109863281
+        },
+        {
+          "date": "2026-05-18",
+          "price": 297.8399963378906
+        },
+        {
+          "date": "2026-05-19",
+          "price": 298.9700012207031
+        },
+        {
+          "date": "2026-05-20",
+          "price": 302.25
+        },
+        {
+          "date": "2026-05-21",
+          "price": 304.989990234375
+        },
+        {
+          "date": "2026-05-22",
+          "price": 308.82000732421875
+        },
+        {
+          "date": "2026-05-26",
+          "price": 308.3299865722656
+        },
+        {
+          "date": "2026-05-27",
+          "price": 310.8500061035156
+        },
+        {
+          "date": "2026-05-28",
+          "price": 312.510009765625
+        },
+        {
+          "date": "2026-05-29",
+          "price": 312.05999755859375
+        },
+        {
+          "date": "2026-06-01",
+          "price": 306.30999755859375
+        },
+        {
+          "date": "2026-06-02",
+          "price": 315.20001220703125
+        },
+        {
+          "date": "2026-06-03",
+          "price": 310.260009765625
+        },
+        {
+          "date": "2026-06-04",
+          "price": 311.2300109863281
+        },
+        {
+          "date": "2026-06-05",
+          "price": 307.3399963378906
+        },
+        {
+          "date": "2026-06-08",
+          "price": 301.5400085449219
+        },
+        {
+          "date": "2026-06-09",
+          "price": 290.54998779296875
+        },
+        {
+          "date": "2026-06-10",
+          "price": 291.5799865722656
+        },
+        {
+          "date": "2026-06-11",
+          "price": 295.6300048828125
+        },
+        {
+          "date": "2026-06-12",
+          "price": 291.1300048828125
+        },
+        {
+          "date": "2026-06-15",
+          "price": 296.4200134277344
+        },
+        {
+          "date": "2026-06-16",
+          "price": 299.239990234375
+        },
+        {
+          "date": "2026-06-17",
+          "price": 295.95001220703125
+        },
+        {
+          "date": "2026-06-18",
+          "price": 298.010009765625
+        },
+        {
+          "date": "2026-06-22",
+          "price": 297.010009765625
+        },
+        {
+          "date": "2026-06-23",
+          "price": 294.29998779296875
+        },
+        {
+          "date": "2026-06-24",
+          "price": 293.0799865722656
+        },
+        {
+          "date": "2026-06-25",
+          "price": 275.1499938964844
+        },
+        {
+          "date": "2026-06-26",
+          "price": 283.7799987792969
+        },
+        {
+          "date": "2026-06-29",
+          "price": 281.739990234375
+        },
+        {
+          "date": "2026-06-30",
+          "price": 289.3599853515625
+        },
+        {
+          "date": "2026-07-01",
+          "price": 294.3800048828125
+        },
+        {
+          "date": "2026-07-02",
+          "price": 308.6300048828125
+        },
+        {
+          "date": "2026-07-06",
+          "price": 312.6600036621094
+        },
+        {
+          "date": "2026-07-07",
+          "price": 310.6600036621094
+        },
+        {
+          "date": "2026-07-08",
+          "price": 313.3900146484375
+        }
+      ],
+      "investmentScore": 85,
+      "confidenceScore": 80,
+      "riskLevel": "Medium",
+      "recommendation": "INVEST",
+      "pros": [
+        "AAPL has a strong market position with a large market capitalization of $4.60T, indicating a high level of stability and investor confidence",
+        "The company's high profit margin of 27.15% and PE ratio of 37.58 suggest a strong ability to generate earnings and a premium valuation"
+      ],
+      "cons": [
+        "The dividend yield of 0.35% is relatively low, which may not be attractive to income-seeking investors",
+        "The lack of recent news may indicate a lack of catalysts for short-term growth, potentially leading to market stagnation"
+      ],
+      "summary": "Based on the financial fundamentals, AAPL appears to be a strong investment opportunity, driven by its stable market position, high profit margin, and premium valuation. However, the low dividend yield and lack of recent news may pose some risks. Overall, the company's strengths outweigh its weaknesses, and its growth potential and profitability make it an attractive investment. With a medium risk level, AAPL is suitable for investors seeking long-term growth and willing to tolerate some market volatility."
+    }
+  },
+  {
+    "id": "1783535699610",
+    "company": "TESLA",
+    "timestamp": "2026-07-08T18:34:59.610Z",
+    "result": {
+      "company": "TSLA",
+      "overview": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in two segments, Automotive; and Energy Generation and Storage. The company offers electric vehicles, as well as sells automotive regulatory credits; and non-warranty maintenance services and collision, automotive insurance services, as well as part sales and retail merchandise sale. It also provides sedans and sport utility vehicles through direct and used vehicle sales, a network of Tesla Superchargers, and in-app upgrades; purchase financing and leasing services; services for electric vehicles through its company-owned service locations and Tesla mobile service technicians; and vehicle limited warranties and extended service plans. In addition, the company engages in the design, manufacture, installation, sale, and leasing of solar energy generation and energy storage products, and related services to residential, commercial, and industrial customers and utilities through its website, stores, and galleries, as well as through a network of channel partners. Further, it provides services and repairs to its energy product customers, including under warranty and extended service plans; and various financing options to its residential customers; lithium-ion battery energy storage products, such as Powerwall and Megapack; energy generation products, including solar panels and solar roof; self-driving development and artificial intelligence software, vehicle control and infotainment software, and battery and powertrain. The company was formerly known as Tesla Motors, Inc. and changed its name to Tesla, Inc. in February 2017. Tesla, Inc. was incorporated in 2003 and is headquartered in Austin, Texas.",
+      "industry": "Auto Manufacturers",
+      "sector": "Consumer Cyclical",
+      "marketCap": "$1.47T",
+      "revenue": "$97.88B",
+      "peRatio": "359.03",
+      "eps": "1.09",
+      "profitMargin": "3.95%",
+      "dividendYield": "N/A",
+      "fiftyTwoWeekHigh": "498.83",
+      "fiftyTwoWeekLow": "293.55",
+      "news": [],
+      "newsSentiment": "Neutral",
+      "investmentScore": 72,
+      "confidenceScore": 80,
+      "riskLevel": "High",
+      "recommendation": "HOLD",
+      "pros": [
+        "TSLA has a significant market capitalization of $1.47T, indicating a strong market presence and brand recognition",
+        "The company's revenue of $97.88B suggests a substantial scale of operations and potential for future growth"
+      ],
+      "cons": [
+        "The PE ratio of 359.03 is extremely high, indicating that the stock may be overvalued and due for a correction",
+        "The profit margin of 3.95% is relatively low compared to other companies in the industry, which could be a concern for long-term sustainability"
+      ],
+      "summary": "Based on the provided financial fundamentals, TSLA appears to be a high-risk investment due to its extremely high PE ratio and relatively low profit margin. However, the company's significant market capitalization and substantial revenue suggest a strong market presence and potential for future growth. Given the lack of recent news, it is difficult to assess the company's current trajectory, but the high PE ratio and low profit margin are concerns that cannot be ignored. Therefore, a hold recommendation is warranted, as investors should carefully monitor the company's future developments and financial performance before making any investment decisions."
+    }
+  },
+  {
+    "id": "1783535504229",
+    "company": "GOOGLE",
+    "timestamp": "2026-07-08T18:31:44.229Z",
+    "result": {
+      "company": "GOOG",
+      "overview": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Cloud, and Other Bets segments. The Google Services segment provides products and services, including ads, Android, Chrome, devices, Gmail, Google Drive, Google Maps, Google Photos, Google Play, Search, and YouTube. It is also involved in the sale of apps and in-app purchases and digital content in Google Play and YouTube; and devices, as well as the provision of YouTube consumer subscription services, such as YouTube TV, YouTube Music and Premium, NFL Sunday Ticket, and Google One. The Google Cloud segment offers consumption-based fees and subscriptions for AI solutions, including AI infrastructure, Vertex AI platform, and Gemini enterprise. It also provides cybersecurity, and data and analytics services; Google Workspace that include cloud-based communication and collaboration tools for enterprises, such as Calendar, Gmail, Docs, Drive, and Meet; and other enterprise services. The Other Bets segment sells transportation and internet services. Alphabet Inc. was incorporated in 1998 and is headquartered in Mountain View, California.",
+      "industry": "Internet Content & Information",
+      "sector": "Communication Services",
+      "marketCap": "$4.33T",
+      "revenue": "$422.50B",
+      "peRatio": "27.21",
+      "eps": "13.05",
+      "profitMargin": "37.92%",
+      "dividendYield": "0.24%",
+      "fiftyTwoWeekHigh": "404.47",
+      "fiftyTwoWeekLow": "173.88",
+      "news": [],
+      "newsSentiment": "Neutral",
+      "investmentScore": 85,
+      "confidenceScore": 80,
+      "riskLevel": "Medium",
+      "recommendation": "INVEST",
+      "pros": [
+        "GOOG has a strong market position with a large market capitalization of $4.33T, indicating a high level of stability and investor confidence",
+        "The company's high profit margin of 37.92% and EPS of 13.05 demonstrate its ability to generate significant profits and maintain a competitive edge in the industry"
+      ],
+      "cons": [
+        "The PE ratio of 27.21 is relatively high, which may indicate that the stock is overvalued and due for a correction",
+        "The dividend yield of 0.24% is relatively low, which may not be attractive to income-seeking investors"
+      ],
+      "summary": "Based on the financial fundamentals, GOOG appears to be a strong and stable company with a high level of profitability and a competitive market position. The company's high profit margin and EPS demonstrate its ability to generate significant profits, and its large market capitalization indicates a high level of investor confidence. However, the high PE ratio and low dividend yield are potential drawbacks that may impact the stock's attractiveness to certain investors. Overall, I recommend an 'INVEST' rating due to the company's strong financials and market position, but with a medium risk level due to the potential for a correction in the stock price."
+    }
+  },
+  {
+    "id": "1783535479283",
+    "company": "AMAZON",
+    "timestamp": "2026-07-08T18:31:19.283Z",
+    "result": {
+      "company": "AMZN",
+      "overview": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates through three segments: North America, International, and Amazon Web Services (AWS). It also manufactures and sells electronic devices, including Kindle, fire tablets, fire TVs, echo, ring, blink, and eero; and develops and produces media content. In addition, the company offers programs that enable sellers to sell their products in its stores; and programs that allow authors, independent publishers, musicians, filmmakers, Twitch streamers, skill and app developers, and others to publish and sell content. Further, it provides compute, storage, Artificial intelligence, database, analytics, machine learning, and other services, as well as advertising services through programs, such as sponsored ads, display, and video advertising. Additionally, the company offers Amazon Prime, a membership program. The company's products offered through its stores include merchandise and content purchased for resale and products offered by third-party sellers. It serves consumers, sellers, developers, enterprises, content creators, advertisers, and employees. The company was incorporated in 1994 and is headquartered in Seattle, Washington.",
+      "industry": "Internet Retail",
+      "sector": "Consumer Cyclical",
+      "marketCap": "$2.60T",
+      "revenue": "$742.78B",
+      "peRatio": "31.15",
+      "eps": "7.77",
+      "profitMargin": "12.22%",
+      "dividendYield": "N/A",
+      "fiftyTwoWeekHigh": "278.56",
+      "fiftyTwoWeekLow": "196.00",
+      "news": [],
+      "newsSentiment": "Neutral",
+      "investmentScore": 85,
+      "confidenceScore": 80,
+      "riskLevel": "Medium",
+      "recommendation": "INVEST",
+      "pros": [
+        "AMZN has a strong market position with a large market capitalization of $2.60T, indicating a high level of stability and investor confidence",
+        "The company's revenue of $742.78B and profit margin of 12.22% demonstrate its ability to generate significant profits and maintain a competitive edge in the internet retail industry"
+      ],
+      "cons": [
+        "The PE ratio of 31.15 is relatively high, which may indicate that the stock is overvalued and due for a correction",
+        "The lack of recent news available may make it difficult to assess the company's current situation and potential risks"
+      ],
+      "summary": "Based on the financial fundamentals, AMZN appears to be a strong and stable company with a significant market presence and ability to generate profits. The high revenue and profit margin are major positives, but the high PE ratio and lack of recent news are concerns that need to be considered. Overall, the company's strengths outweigh its weaknesses, and I recommend investing in AMZN, but with a medium risk level due to the potential for market volatility. The investment score of 85 reflects the company's strong financials and market position, but is tempered by the high PE ratio and lack of recent news."
+    }
+  },
+  {
+    "id": "1783535291959",
+    "company": "NIFTY",
+    "timestamp": "2026-07-08T18:28:11.959Z",
+    "result": {
+      "company": "4262.T",
+      "overview": "NIFTY Lifestyle Co., Ltd. provides action support platforms and solutions in Japan. The company operates myhome.nifty.com, a real estate information service that allows searching for rental and purchased properties listed on various real estate sites; onsen.nifty.com, which offers hot spring facility information, such as one-day hot springs and super public baths, as well as hot spring information where user can search for coupons; and gaiheki-madoguchi.com, a platform service that allows to check the fair market price for exterior wall painting, as well as sumaisagashi-madoguchi.com, a housing search window. It also operates dm.niftylifestyle.co.jp/dfo, a data feed optimization solution tool for web advertisement placement used by recruitment, real estate, and travel sites, as well as operators of EC; and online-naiken.com, an online real estate preview solution tool specialized in real estate optimized for online previews, consultations, and IT emphasis. In addition, the company offers consulting services. The company was incorporated in 2018 and is based in Tokyo, Japan. NIFTY Lifestyle Co., Ltd. is a subsidiary of NIFTY Corporation.",
+      "industry": "Real Estate Services",
+      "sector": "Real Estate",
+      "marketCap": "$8.45B",
+      "revenue": "$5.24B",
+      "peRatio": "10.86",
+      "eps": "122.41",
+      "profitMargin": "14.85%",
+      "dividendYield": "4.80%",
+      "fiftyTwoWeekHigh": "1529.00",
+      "fiftyTwoWeekLow": "1191.00",
+      "news": [],
+      "newsSentiment": "Neutral",
+      "investmentScore": 72,
+      "confidenceScore": 80,
+      "riskLevel": "Medium",
+      "recommendation": "INVEST",
+      "pros": [
+        "The company's profit margin of 14.85% indicates a strong ability to maintain profitability, suggesting effective cost management and competitive pricing strategies.",
+        "A dividend yield of 4.80% provides a relatively attractive income stream for investors, which can be particularly appealing in low-interest-rate environments."
+      ],
+      "cons": [
+        "The lack of recent news may indicate a period of stagnation or lack of significant developments, which could impact the company's growth prospects.",
+        "The PE ratio of 10.86, while not excessively high, may not fully reflect the company's growth potential, especially if the real estate services sector experiences an upswing."
+      ],
+      "summary": "Based on the provided financial fundamentals, 4262.T presents a compelling investment opportunity, driven by its strong profit margin and attractive dividend yield. The company's market capitalization and revenue suggest a significant presence in the real estate services industry, which could support long-term growth. However, the absence of recent news and a moderate PE ratio introduce some uncertainty regarding the company's immediate growth prospects. Overall, considering the current financial health and profitability, an investment in 4262.T is recommended, albeit with a medium risk level due to potential market fluctuations and the need for ongoing monitoring of industry trends and company performance."
+    }
+  },
+  {
+    "id": "1783488141139",
+    "company": "INFOSYS",
+    "timestamp": "2026-07-08T05:22:21.139Z",
+    "result": {
+      "company": "INFY",
+      "overview": "Infosys Limited provides consulting, technology, outsourcing, and digital services worldwide. The company offers insight services, such as applied and generative AI, sustainability services, and Infosys Topaz, an AI-first set of services, solutions, and platforms; blockchain, Internet of Things, and engineering services; cybersecurity and quality engineering services; and enterprise agile DevOps, API economy and microservices, application modernization, and digital process automation. It also provides digital supply chain, Microsoft business application services, Microsoft cloud business, Oracle, SAP, service experience transformation, Salesforce, energy transition, network transformation services, infrastructure services, global capability center, and Infosys Cobalt, a suite of services, solutions, and platforms. In addition, the company offers experience services, including digital marketing, digital commerce, digital interactions, digital workplace services, digital experience, metaverse, and Infosys Aster, a marketing suite; and EdgeVerve, Infosys Finacle, Infosys Live Enterprise Suite, Infosys Cortex, Infosys Meridian, Panaya, Infosys Equinox, Infosys Topaz Fabric, Infosys Wingspan, Infosys Helix, and Infosys Polycloud platforms. It serves aerospace and defense, agriculture, automotive, chemical manufacturing, communication services, consumer packaged goods, education, engineering procurement and construction, financial services, oil and gas, private equity, professional services, public sector, healthcare, high technology, industrial manufacturing, information services and publishing, insurance, life sciences, logistics and distribution, media, entertainment, mining, retail, semiconductor, travel and hospitality, utilities, and waste management industries. The company was formerly known as Infosys Technologies Limited and changed its name to Infosys Limited in June 2011. Infosys Limited was incorporated in 1981 and is headquartered in Bengaluru, India.",
+      "industry": "Information Technology Services",
+      "sector": "Technology",
+      "marketCap": "$45.63B",
+      "revenue": "$20.16B",
+      "peRatio": "13.58",
+      "eps": "0.83",
+      "profitMargin": "16.43%",
+      "dividendYield": "4.81%",
+      "fiftyTwoWeekHigh": "30.00",
+      "fiftyTwoWeekLow": "10.34",
+      "news": [],
+      "newsSentiment": "Neutral",
+      "investmentScore": 72,
+      "confidenceScore": 80,
+      "riskLevel": "Medium",
+      "recommendation": "INVEST",
+      "pros": [
+        "The company's profit margin of 16.43% indicates a strong ability to maintain profitability, which is a positive sign for investors.",
+        "The dividend yield of 4.81% provides a relatively attractive return for investors seeking regular income."
+      ],
+      "cons": [
+        "The lack of recent news may indicate a lack of significant developments or catalysts for growth, which could impact the stock's price movement.",
+        "The PE ratio of 13.58, although not excessively high, may not provide a significant margin of safety for investors, especially if the company's growth slows down."
+      ],
+      "summary": "Based on the provided financial fundamentals, INFY appears to be a relatively stable company with a strong profit margin and attractive dividend yield. While the lack of recent news may be a concern, the company's overall financial health and growth potential in the technology sector are positive factors. However, investors should be cautious of the potential risks, including the relatively moderate PE ratio and the possibility of slowed growth. Overall, I recommend an 'INVEST' rating, as the company's strengths outweigh its weaknesses, but investors should continue to monitor the company's performance and industry trends."
+    }
+  },
+  {
+    "id": "1783487877526",
+    "company": "WIPRO",
+    "timestamp": "2026-07-08T05:17:57.526Z",
+    "result": {
+      "company": "WIPRO (MOCK DATA)",
+      "overview": "This is a simulated overview for WIPRO because your network proxy or API limit blocked the request to Yahoo Finance. In a production environment without proxy restrictions, this would be the actual company description.",
+      "industry": "Technology",
+      "sector": "Consumer Electronics",
+      "marketCap": "$2.85T",
+      "revenue": "$383.28B",
+      "peRatio": "28.5",
+      "eps": "6.42",
+      "profitMargin": "25.31%",
+      "dividendYield": "0.53%",
+      "fiftyTwoWeekHigh": "199.62",
+      "fiftyTwoWeekLow": "164.08",
+      "news": [],
+      "newsSentiment": "Neutral",
+      "investmentScore": 82,
+      "confidenceScore": 80,
+      "riskLevel": "Medium",
+      "recommendation": "INVEST",
+      "pros": [
+        "WIPRO's high market capitalization of $2.85T indicates a strong market presence and stability",
+        "The company's high profit margin of 25.31% suggests efficient operations and ability to maintain profitability"
+      ],
+      "cons": [
+        "The PE ratio of 28.5 is relatively high, which may indicate overvaluation and potential for correction",
+        "The dividend yield of 0.53% is relatively low, which may not be attractive to income-seeking investors"
+      ],
+      "summary": "Based on the analysis of WIPRO's financial fundamentals, the company appears to be a strong player in the consumer electronics sector with a stable market presence and efficient operations. The high profit margin and significant revenue of $383.28B are notable strengths. However, the high PE ratio and low dividend yield are potential drawbacks that may impact the investment decision. Overall, considering the company's financial health and growth potential, I recommend an 'INVEST' rating, but with a medium risk level due to the potential for market correction."
+    }
+  }
+]

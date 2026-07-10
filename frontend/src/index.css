@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  color-scheme: light dark;
+}
+
+/* 
+  Vibrant Animated Mesh Gradients 
+*/
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  /* Light Mode: Soft, vibrant pastel mesh */
+  background: 
+    radial-gradient(at 0% 0%, hsla(253,16%,7%,0) 0, transparent 50%), 
+    radial-gradient(at 50% 0%, hsla(225,39%,30%,0) 0, transparent 50%), 
+    radial-gradient(at 100% 0%, hsla(339,49%,30%,0) 0, transparent 50%);
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 40% 20%, hsla(250,100%,74%,0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(189,100%,56%,0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(340,100%,76%,0.15) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #0f172a;
+}
+
+.dark body {
+  /* Dark Mode: Deep Space Nebula */
+  background-color: #0b0f19;
+  background-image: 
+    radial-gradient(at 40% 20%, hsla(250,100%,74%,0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(189,100%,56%,0.15) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(340,100%,76%,0.15) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #f8fafc;
+}
+
+/* 
+  Advanced Glowing Glassmorphism 
+*/
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/60 backdrop-blur-2xl border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)];
+  }
+  
+  .dark .glass-panel {
+    @apply bg-slate-900/60 backdrop-blur-2xl border border-slate-700/50 shadow-[0_8px_30px_rgb(0,0,0,0.2)];
+  }
+
+  /* Stunning glowing text gradient */
+  .text-gradient-vibrant {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500;
+  }
+}
+
+/* Custom Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
