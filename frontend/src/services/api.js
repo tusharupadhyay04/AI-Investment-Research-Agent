@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // When deploying, we will use an environment variable for the backend URL
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://ai-investment-research-agent-94da.onrender.com/api';
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
