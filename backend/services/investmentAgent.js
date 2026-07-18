@@ -55,9 +55,14 @@ export const runInvestmentAnalysis = async (companyName) => {
     const response = await model.invoke(formattedPrompt);
     let content = response.content;
 
-    // 5. Clean up the JSON response (Handle potential markdown from LLM)
-    // Sometimes LLMs wrap JSON in ```json ... ``` despite instructions not to.
-    content = content.replace(/```json/g, '').replace(/```/g, '').trim();
+    // 5. Clean up the JSON response (Handle potential markdown and conversational text from LLM)
+    const jsonMatch = content.match(/\{[\s\S]*\}/);
+    if (jsonMatch) {
+      content = jsonMatch[0];
+    } else {
+      // Fallback if no braces found
+      content = content.replace(/```json/g, '').replace(/```/g, '').trim();
+    }
 
     const aiDecision = JSON.parse(content);
 

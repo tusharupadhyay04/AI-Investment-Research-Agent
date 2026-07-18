@@ -23,9 +23,11 @@ export const getTickerSymbol = async (companyName) => {
     }
   } catch (err) {
     console.error('Yahoo Finance search failed:', err.message);
+    throw new Error(`Yahoo Finance search failed: ${err.message}`);
   }
-  // Fallback to original input if search fails
-  return companyName;
+  
+  // If we found no quotes
+  throw new Error(`Could not find a valid stock ticker for: ${companyName}`);
 };
 
 /**
@@ -65,9 +67,7 @@ export const getCompanyFinancials = async (companyNameOrTicker) => {
     };
   } catch (error) {
     console.error(`Error fetching financial data from Yahoo Finance for ${companyNameOrTicker}:`, error.message);
-    // If corporate proxy blocks Yahoo Finance (502 / SSL Error), fallback to Mock Data so the app runs!
-    console.warn('⚠️ Network or Proxy Error Detected! Falling back to Mock Data to prevent app crash.');
-    return getMockData((typeof symbol !== 'undefined' && symbol) ? symbol.toUpperCase() : companyNameOrTicker.toUpperCase());
+    throw new Error(`Failed to fetch financial data from Yahoo Finance: ${error.message}`);
   }
 };
 
@@ -122,22 +122,3 @@ const formatCurrency = (value) => {
   }
 };
 
-/**
- * Provides mock financial data when API limits are reached
- */
-const getMockData = (symbol) => {
-  return {
-    company: `${symbol} (MOCK DATA)`,
-    overview: `This is a simulated overview for ${symbol} because your network proxy or API limit blocked the request to Yahoo Finance. In a production environment without proxy restrictions, this would be the actual company description.`,
-    industry: 'Technology',
-    sector: 'Consumer Electronics',
-    marketCap: '$2.85T',
-    revenue: '$383.28B',
-    peRatio: '28.5',
-    eps: '6.42',
-    profitMargin: '25.31%',
-    dividendYield: '0.53%',
-    fiftyTwoWeekHigh: '199.62',
-    fiftyTwoWeekLow: '164.08',
-  };
-};
