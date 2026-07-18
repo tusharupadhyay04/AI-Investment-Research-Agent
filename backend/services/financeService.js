@@ -24,8 +24,23 @@ export const getTickerSymbol = async (companyName) => {
     }
   } catch (err) {
     console.error('Yahoo Finance search failed:', err.message);
-    console.log('Attempting to use input as ticker symbol fallback.');
-    return companyName.toUpperCase(); // Fallback to raw input for Alpha Vantage
+    
+    // Try Alpha Vantage SYMBOL_SEARCH as a fallback
+    console.log('Attempting Alpha Vantage SYMBOL_SEARCH fallback...');
+    try {
+      const apiKey = process.env.ALPHA_VANTAGE_API_KEY;
+      if (apiKey) {
+        const response = await axios.get(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${companyName}&apikey=${apiKey}`);
+        if (response.data && response.data.bestMatches && response.data.bestMatches.length > 0) {
+          return response.data.bestMatches[0]['1. symbol'];
+        }
+      }
+    } catch (avSearchErr) {
+      console.error('Alpha Vantage search fallback failed:', avSearchErr.message);
+    }
+
+    console.log('Falling back to raw input as ticker symbol.');
+    return companyName.toUpperCase(); // Fallback to raw input
   }
   
   // If we found no quotes
@@ -78,7 +93,7 @@ export const getCompanyFinancials = async (companyNameOrTicker) => {
       const data = response.data;
       
       if (!data || Object.keys(data).length === 0 || data.Information) {
-         throw new Error('Alpha Vantage returned no data or rate limit reached.');
+         throw new Error(data.Information || 'Alpha Vantage returned no data or rate limit reached.');
       }
       
       return {
@@ -97,7 +112,7 @@ export const getCompanyFinancials = async (companyNameOrTicker) => {
       };
     } catch (avError) {
       console.error('Alpha Vantage Fallback failed:', avError.message);
-      throw new Error(`Failed to fetch financial data from both Yahoo Finance and Alpha Vantage. ${error.message}`);
+      throw new Error(`Yahoo Finance Error: ${error.message} | Alpha Vantage Error: ${avError.message}`);
     }
   }
 };
