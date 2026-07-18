@@ -92,8 +92,8 @@ export const getCompanyFinancials = async (companyNameOrTicker) => {
         eps: data.EPS && data.EPS !== '-' ? parseFloat(data.EPS).toFixed(2) : 'N/A',
         profitMargin: data.ProfitMargin && data.ProfitMargin !== '-' ? `${(parseFloat(data.ProfitMargin) * 100).toFixed(2)}%` : 'N/A',
         dividendYield: data.DividendYield && data.DividendYield !== '-' ? `${(parseFloat(data.DividendYield) * 100).toFixed(2)}%` : 'N/A',
-        fiftyTwoWeekHigh: data.52WeekHigh && data.52WeekHigh !== '-' ? parseFloat(data.52WeekHigh).toFixed(2) : 'N/A',
-        fiftyTwoWeekLow: data.52WeekLow && data.52WeekLow !== '-' ? parseFloat(data.52WeekLow).toFixed(2) : 'N/A',
+        fiftyTwoWeekHigh: data['52WeekHigh'] && data['52WeekHigh'] !== '-' ? parseFloat(data['52WeekHigh']).toFixed(2) : 'N/A',
+        fiftyTwoWeekLow: data['52WeekLow'] && data['52WeekLow'] !== '-' ? parseFloat(data['52WeekLow']).toFixed(2) : 'N/A',
       };
     } catch (avError) {
       console.error('Alpha Vantage Fallback failed:', avError.message);
