@@ -25,18 +25,18 @@ export const getTickerSymbol = async (companyName) => {
   } catch (err) {
     console.error('Yahoo Finance search failed:', err.message);
     
-    // Try Alpha Vantage SYMBOL_SEARCH as a fallback
-    console.log('Attempting Alpha Vantage SYMBOL_SEARCH fallback...');
+    // Try Finnhub search as a fallback
+    console.log('Attempting Finnhub search fallback...');
     try {
-      const apiKey = process.env.ALPHA_VANTAGE_API_KEY;
+      const apiKey = process.env.FINNHUB_API_KEY;
       if (apiKey) {
-        const response = await axios.get(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${companyName}&apikey=${apiKey}`);
-        if (response.data && response.data.bestMatches && response.data.bestMatches.length > 0) {
-          return response.data.bestMatches[0]['1. symbol'];
+        const response = await axios.get(`https://finnhub.io/api/v1/search?q=${companyName}&token=${apiKey}`);
+        if (response.data && response.data.result && response.data.result.length > 0) {
+          return response.data.result[0].symbol;
         }
       }
-    } catch (avSearchErr) {
-      console.error('Alpha Vantage search fallback failed:', avSearchErr.message);
+    } catch (finnhubSearchErr) {
+      console.error('Finnhub search fallback failed:', finnhubSearchErr.message);
     }
 
     console.log('Falling back to raw input as ticker symbol.');
@@ -83,36 +83,39 @@ export const getCompanyFinancials = async (companyNameOrTicker) => {
     };
   } catch (error) {
     console.error(`Error fetching from Yahoo Finance for ${companyNameOrTicker}:`, error.message);
-    console.log(`Attempting fallback to Alpha Vantage for symbol: ${symbol}`);
+    console.log(`Attempting fallback to Finnhub for symbol: ${symbol}`);
     
     try {
-      const apiKey = process.env.ALPHA_VANTAGE_API_KEY;
-      if (!apiKey) throw new Error('No Alpha Vantage API key configured.');
+      const apiKey = process.env.FINNHUB_API_KEY;
+      if (!apiKey) throw new Error('No Finnhub API key configured.');
       
-      const response = await axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${symbol}&apikey=${apiKey}`);
-      const data = response.data;
+      const profileRes = await axios.get(`https://finnhub.io/api/v1/stock/profile2?symbol=${symbol}&token=${apiKey}`);
+      const metricRes = await axios.get(`https://finnhub.io/api/v1/stock/metric?symbol=${symbol}&metric=all&token=${apiKey}`);
       
-      if (!data || Object.keys(data).length === 0 || data.Information) {
-         throw new Error(data.Information || 'Alpha Vantage returned no data or rate limit reached.');
+      const profile = profileRes.data;
+      const metrics = metricRes.data && metricRes.data.metric ? metricRes.data.metric : {};
+      
+      if (!profile || Object.keys(profile).length === 0) {
+         throw new Error('Finnhub returned no profile data or rate limit reached.');
       }
       
       return {
         company: symbol,
-        overview: data.Description || 'No description available.',
-        industry: data.Industry || 'Unknown',
-        sector: data.Sector || 'Unknown',
-        marketCap: data.MarketCapitalization ? formatCurrency(data.MarketCapitalization) : 'N/A',
-        revenue: data.RevenueTTM ? formatCurrency(data.RevenueTTM) : 'N/A',
-        peRatio: data.PERatio && data.PERatio !== '-' ? parseFloat(data.PERatio).toFixed(2) : 'N/A',
-        eps: data.EPS && data.EPS !== '-' ? parseFloat(data.EPS).toFixed(2) : 'N/A',
-        profitMargin: data.ProfitMargin && data.ProfitMargin !== '-' ? `${(parseFloat(data.ProfitMargin) * 100).toFixed(2)}%` : 'N/A',
-        dividendYield: data.DividendYield && data.DividendYield !== '-' ? `${(parseFloat(data.DividendYield) * 100).toFixed(2)}%` : 'N/A',
-        fiftyTwoWeekHigh: data['52WeekHigh'] && data['52WeekHigh'] !== '-' ? parseFloat(data['52WeekHigh']).toFixed(2) : 'N/A',
-        fiftyTwoWeekLow: data['52WeekLow'] && data['52WeekLow'] !== '-' ? parseFloat(data['52WeekLow']).toFixed(2) : 'N/A',
+        overview: `${profile.name} is a company in the ${profile.finnhubIndustry} industry based in ${profile.country}. (Detailed overview omitted by Finnhub API).`,
+        industry: profile.finnhubIndustry || 'Unknown',
+        sector: profile.finnhubIndustry || 'Unknown', // Finnhub lumps these
+        marketCap: profile.marketCapitalization ? formatCurrency(profile.marketCapitalization * 1000000) : 'N/A', // Finnhub returns in Millions
+        revenue: metrics.revenuePerShareTTM ? `$${metrics.revenuePerShareTTM} per share` : 'N/A',
+        peRatio: metrics.peExclExtraTTM ? metrics.peExclExtraTTM.toFixed(2) : 'N/A',
+        eps: metrics.epsExclExtraItemsTTM ? metrics.epsExclExtraItemsTTM.toFixed(2) : 'N/A',
+        profitMargin: 'N/A',
+        dividendYield: metrics.dividendYieldIndicatedAnnual ? `${metrics.dividendYieldIndicatedAnnual.toFixed(2)}%` : 'N/A',
+        fiftyTwoWeekHigh: metrics['52WeekHigh'] ? metrics['52WeekHigh'].toFixed(2) : 'N/A',
+        fiftyTwoWeekLow: metrics['52WeekLow'] ? metrics['52WeekLow'].toFixed(2) : 'N/A',
       };
-    } catch (avError) {
-      console.error('Alpha Vantage Fallback failed:', avError.message);
-      throw new Error(`Yahoo Finance Error: ${error.message} | Alpha Vantage Error: ${avError.message}`);
+    } catch (finnhubError) {
+      console.error('Finnhub Fallback failed:', finnhubError.message);
+      throw new Error(`Yahoo Finance Error: ${error.message} | Finnhub Error: ${finnhubError.message}`);
     }
   }
 };
