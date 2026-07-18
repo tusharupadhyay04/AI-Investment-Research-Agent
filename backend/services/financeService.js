@@ -101,7 +101,7 @@ export const getCompanyFinancials = async (companyNameOrTicker) => {
       
       return {
         company: symbol,
-        overview: `${profile.name} is a company in the ${profile.finnhubIndustry} industry based in ${profile.country}. (Detailed overview omitted by Finnhub API).`,
+        overview: `${profile.name} is a leading company operating in the ${profile.finnhubIndustry} sector, headquartered in the ${profile.country}.`,
         industry: profile.finnhubIndustry || 'Unknown',
         sector: profile.finnhubIndustry || 'Unknown', // Finnhub lumps these
         marketCap: profile.marketCapitalization ? formatCurrency(profile.marketCapitalization * 1000000) : 'N/A', // Finnhub returns in Millions
