@@ -31,7 +31,7 @@ export const analyzeCompany = async (req, res) => {
     // Determine the status code based on the type of error
     // If it's a rate limit or specific API error, we can send a 422 or 503
     let statusCode = 500;
-    let errorMessage = 'An internal server error occurred while analyzing the company.';
+    let errorMessage = error.message || 'An internal server error occurred while analyzing the company.';
 
     if (error.message.includes('API rate limit')) {
       statusCode = 429;

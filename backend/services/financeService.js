@@ -1,3 +1,4 @@
+import axios from 'axios';
 import yahooFinanceDefault from 'yahoo-finance2';
 import dotenv from 'dotenv';
 
@@ -23,7 +24,8 @@ export const getTickerSymbol = async (companyName) => {
     }
   } catch (err) {
     console.error('Yahoo Finance search failed:', err.message);
-    throw new Error(`Yahoo Finance search failed: ${err.message}`);
+    console.log('Attempting to use input as ticker symbol fallback.');
+    return companyName.toUpperCase(); // Fallback to raw input for Alpha Vantage
   }
   
   // If we found no quotes
@@ -31,16 +33,16 @@ export const getTickerSymbol = async (companyName) => {
 };
 
 /**
- * Fetches company financial overview from Yahoo Finance
+ * Fetches company financial overview from Yahoo Finance with Alpha Vantage fallback
  * @param {string} companyNameOrTicker - The stock ticker symbol or company name (e.g., AAPL or Apple)
  * @returns {Object} Structured financial data
  */
 export const getCompanyFinancials = async (companyNameOrTicker) => {
+  let symbol = companyNameOrTicker;
+  
   try {
-    // 1. Convert full company name to ticker symbol
-    const symbol = await getTickerSymbol(companyNameOrTicker);
+    symbol = await getTickerSymbol(companyNameOrTicker);
     
-    // 2. Fetch all necessary modules from Yahoo Finance
     const queryOptions = { modules: ['summaryProfile', 'defaultKeyStatistics', 'financialData', 'summaryDetail'] };
     const result = await yahooFinance.quoteSummary(symbol, queryOptions);
 
@@ -50,7 +52,6 @@ export const getCompanyFinancials = async (companyNameOrTicker) => {
 
     const { summaryProfile, defaultKeyStatistics, financialData, summaryDetail } = result;
 
-    // 3. Structure the data exactly as our AI and Frontend expect
     return {
       company: symbol,
       overview: summaryProfile?.longBusinessSummary || 'No description available.',
@@ -66,8 +67,38 @@ export const getCompanyFinancials = async (companyNameOrTicker) => {
       fiftyTwoWeekLow: summaryDetail?.fiftyTwoWeekLow ? summaryDetail.fiftyTwoWeekLow.toFixed(2) : 'N/A',
     };
   } catch (error) {
-    console.error(`Error fetching financial data from Yahoo Finance for ${companyNameOrTicker}:`, error.message);
-    throw new Error(`Failed to fetch financial data from Yahoo Finance: ${error.message}`);
+    console.error(`Error fetching from Yahoo Finance for ${companyNameOrTicker}:`, error.message);
+    console.log(`Attempting fallback to Alpha Vantage for symbol: ${symbol}`);
+    
+    try {
+      const apiKey = process.env.ALPHA_VANTAGE_API_KEY;
+      if (!apiKey) throw new Error('No Alpha Vantage API key configured.');
+      
+      const response = await axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${symbol}&apikey=${apiKey}`);
+      const data = response.data;
+      
+      if (!data || Object.keys(data).length === 0 || data.Information) {
+         throw new Error('Alpha Vantage returned no data or rate limit reached.');
+      }
+      
+      return {
+        company: symbol,
+        overview: data.Description || 'No description available.',
+        industry: data.Industry || 'Unknown',
+        sector: data.Sector || 'Unknown',
+        marketCap: data.MarketCapitalization ? formatCurrency(data.MarketCapitalization) : 'N/A',
+        revenue: data.RevenueTTM ? formatCurrency(data.RevenueTTM) : 'N/A',
+        peRatio: data.PERatio && data.PERatio !== '-' ? parseFloat(data.PERatio).toFixed(2) : 'N/A',
+        eps: data.EPS && data.EPS !== '-' ? parseFloat(data.EPS).toFixed(2) : 'N/A',
+        profitMargin: data.ProfitMargin && data.ProfitMargin !== '-' ? `${(parseFloat(data.ProfitMargin) * 100).toFixed(2)}%` : 'N/A',
+        dividendYield: data.DividendYield && data.DividendYield !== '-' ? `${(parseFloat(data.DividendYield) * 100).toFixed(2)}%` : 'N/A',
+        fiftyTwoWeekHigh: data.52WeekHigh && data.52WeekHigh !== '-' ? parseFloat(data.52WeekHigh).toFixed(2) : 'N/A',
+        fiftyTwoWeekLow: data.52WeekLow && data.52WeekLow !== '-' ? parseFloat(data.52WeekLow).toFixed(2) : 'N/A',
+      };
+    } catch (avError) {
+      console.error('Alpha Vantage Fallback failed:', avError.message);
+      throw new Error(`Failed to fetch financial data from both Yahoo Finance and Alpha Vantage. ${error.message}`);
+    }
   }
 };
 
