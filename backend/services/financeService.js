@@ -25,18 +25,18 @@ export const getTickerSymbol = async (companyName) => {
   } catch (err) {
     console.error('Yahoo Finance search failed:', err.message);
     
-    // Try FMP search as a fallback
-    console.log('Attempting FMP search fallback...');
+    // Try Alpha Vantage SYMBOL_SEARCH as a fallback
+    console.log('Attempting Alpha Vantage SYMBOL_SEARCH fallback...');
     try {
-      const apiKey = process.env.FMP_API_KEY;
+      const apiKey = process.env.ALPHA_VANTAGE_API_KEY;
       if (apiKey) {
-        const response = await axios.get(`https://financialmodelingprep.com/api/v3/search?query=${companyName}&limit=1&apikey=${apiKey}`);
-        if (response.data && response.data.length > 0) {
-          return response.data[0].symbol;
+        const response = await axios.get(`https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=${companyName}&apikey=${apiKey}`);
+        if (response.data && response.data.bestMatches && response.data.bestMatches.length > 0) {
+          return response.data.bestMatches[0]['1. symbol'];
         }
       }
-    } catch (fmpSearchErr) {
-      console.error('FMP search fallback failed:', fmpSearchErr.message);
+    } catch (avSearchErr) {
+      console.error('Alpha Vantage search fallback failed:', avSearchErr.message);
     }
 
     console.log('Falling back to raw input as ticker symbol.');
@@ -83,55 +83,36 @@ export const getCompanyFinancials = async (companyNameOrTicker) => {
     };
   } catch (error) {
     console.error(`Error fetching from Yahoo Finance for ${companyNameOrTicker}:`, error.message);
-    console.log(`Attempting fallback to FMP for symbol: ${symbol}`);
+    console.log(`Attempting fallback to Alpha Vantage for symbol: ${symbol}`);
     
     try {
-      const apiKey = process.env.FMP_API_KEY;
-      if (!apiKey) throw new Error('No FMP API key configured.');
+      const apiKey = process.env.ALPHA_VANTAGE_API_KEY;
+      if (!apiKey) throw new Error('No Alpha Vantage API key configured.');
       
-      const profileRes = await axios.get(`https://financialmodelingprep.com/api/v3/profile/${symbol}?apikey=${apiKey}`);
-      const quoteRes = await axios.get(`https://financialmodelingprep.com/api/v3/quote/${symbol}?apikey=${apiKey}`);
+      const response = await axios.get(`https://www.alphavantage.co/query?function=OVERVIEW&symbol=${symbol}&apikey=${apiKey}`);
+      const data = response.data;
       
-      const profile = profileRes.data && profileRes.data[0];
-      const quote = quoteRes.data && quoteRes.data[0];
-      
-      if (!profile) {
-         throw new Error('FMP returned no profile data or rate limit reached.');
+      if (!data || Object.keys(data).length === 0 || data.Information) {
+         throw new Error(data.Information || 'Alpha Vantage returned no data or rate limit reached.');
       }
       
-      // Calculate Dividend Yield if possible (lastDiv / price)
-      let divYield = 'N/A';
-      if (profile.lastDiv && profile.price) {
-         divYield = `${((profile.lastDiv / profile.price) * 100).toFixed(2)}%`;
-      }
-      
-      // Attempt to split FMP's 52-week range "Low - High"
-      let high52 = 'N/A', low52 = 'N/A';
-      if (profile.range) {
-         const parts = profile.range.split('-');
-         if (parts.length === 2) {
-             low52 = parseFloat(parts[0].trim()).toFixed(2);
-             high52 = parseFloat(parts[1].trim()).toFixed(2);
-         }
-      }
-
       return {
         company: symbol,
-        overview: profile.description || 'No description available.',
-        industry: profile.industry || 'Unknown',
-        sector: profile.sector || 'Unknown',
-        marketCap: profile.mktCap ? formatCurrency(profile.mktCap) : 'N/A',
-        revenue: 'N/A', // FMP requires income statement endpoint for this, keeping simple
-        peRatio: quote && quote.pe ? parseFloat(quote.pe).toFixed(2) : 'N/A',
-        eps: quote && quote.eps ? parseFloat(quote.eps).toFixed(2) : 'N/A',
-        profitMargin: 'N/A', // Keeping simple
-        dividendYield: divYield,
-        fiftyTwoWeekHigh: high52 !== 'N/A' ? high52 : (quote && quote.yearHigh ? parseFloat(quote.yearHigh).toFixed(2) : 'N/A'),
-        fiftyTwoWeekLow: low52 !== 'N/A' ? low52 : (quote && quote.yearLow ? parseFloat(quote.yearLow).toFixed(2) : 'N/A'),
+        overview: data.Description || 'No description available.',
+        industry: data.Industry || 'Unknown',
+        sector: data.Sector || 'Unknown',
+        marketCap: data.MarketCapitalization ? formatCurrency(data.MarketCapitalization) : 'N/A',
+        revenue: data.RevenueTTM ? formatCurrency(data.RevenueTTM) : 'N/A',
+        peRatio: data.PERatio && data.PERatio !== '-' ? parseFloat(data.PERatio).toFixed(2) : 'N/A',
+        eps: data.EPS && data.EPS !== '-' ? parseFloat(data.EPS).toFixed(2) : 'N/A',
+        profitMargin: data.ProfitMargin && data.ProfitMargin !== '-' ? `${(parseFloat(data.ProfitMargin) * 100).toFixed(2)}%` : 'N/A',
+        dividendYield: data.DividendYield && data.DividendYield !== '-' ? `${(parseFloat(data.DividendYield) * 100).toFixed(2)}%` : 'N/A',
+        fiftyTwoWeekHigh: data['52WeekHigh'] && data['52WeekHigh'] !== '-' ? parseFloat(data['52WeekHigh']).toFixed(2) : 'N/A',
+        fiftyTwoWeekLow: data['52WeekLow'] && data['52WeekLow'] !== '-' ? parseFloat(data['52WeekLow']).toFixed(2) : 'N/A',
       };
-    } catch (fmpError) {
-      console.error('FMP Fallback failed:', fmpError.message);
-      throw new Error(`Yahoo Finance Error: ${error.message} | FMP Error: ${fmpError.message}`);
+    } catch (avError) {
+      console.error('Alpha Vantage Fallback failed:', avError.message);
+      throw new Error(`Yahoo Finance Error: ${error.message} | Alpha Vantage Error: ${avError.message}`);
     }
   }
 };
